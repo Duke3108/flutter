@@ -1,0 +1,116 @@
+[
+    {
+        "_id": "67dff21bf5f2c796e8160748",
+        "name": "Fortarun 3",
+        "title": "Giày chạy bộ hàng ngày được làm một phần từ vật liệu tái chế.",
+        "category": "giaytreem",
+        "imageUrl": [
+            "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2de33d79e1c444dcad9036decff8ea4f_9366/Fortarun_3_Shoes_Kids_Black_JI2192_01_00_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/99068b9650044621b397416784b0e46e_9366/Fortarun_3_Shoes_Kids_Black_JI2192_02_standard_hover_hover.jpg",
+            "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/81c5f73580e4473185cde6b6b6aaa887_9366/Fortarun_3_Shoes_Kids_Black_JI2192_03_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ee449e8ea1984779add739fd8e68bde1_9366/Fortarun_3_Shoes_Kids_Black_JI2192_04_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6ce0036c52d741e7879efdeae0e30ed1_9366/Fortarun_3_Shoes_Kids_Black_JI2192_05_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d3bb7d6ad8f14b1ca9ce9cf94602972a_9366/Fortarun_3_Shoes_Kids_Black_JI2192_06_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3e00592ceead401c9e65f2f6026dbfff_9366/Fortarun_3_Shoes_Kids_Black_JI2192_09_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/43fd3ae7542142c6b42df768f488cc6e_9366/Fortarun_3_Shoes_Kids_Black_JI2192_41_detail.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3581391bd5774a718025cceecd411594_9366/Fortarun_3_Shoes_Kids_Black_JI2192_42_detail.jpg"
+        ],
+        "oldPrice": "4900000",
+        "sizes": [
+            {
+                "size": "10",
+                "isSelected": false,
+                "_id": "67dff21bf5f2c796e8160749"
+            },
+            {
+                "size": "11",
+                "isSelected": false,
+                "_id": "67dff21bf5f2c796e816074a"
+            },
+            {
+                "size": "12",
+                "isSelected": false,
+                "_id": "67dff21bf5f2c796e816074b"
+            },
+            {
+                "size": "13",
+                "isSelected": false,
+                "_id": "67dff21bf5f2c796e816074c"
+            },
+            {
+                "size": "14",
+                "isSelected": false,
+                "_id": "67dff21bf5f2c796e816074d"
+            },
+            {
+                "size": "15",
+                "isSelected": false,
+                "_id": "67dff21bf5f2c796e816074e"
+            },
+            {
+                "size": "16",
+                "isSelected": false,
+                "_id": "67dff21bf5f2c796e816074f"
+            }
+        ],
+        "price": "4900000",
+        "description": "Thiết kế chạy bộ cổ điển kết hợp với sự thoải mái hiện đại trong đôi giày adidas này. Được thiết kế để đuổi theo bạn bè quanh sân chơi hoặc chạy đua đến công viên, chúng có phần trên bằng lưới thoáng khí và đệm Cloudfoam sang trọng. Dây đai móc và vòng giúp bạn chuẩn bị dễ dàng."
+    },
+    {
+        "_id": "67dff16cf5f2c796e816073f",
+        "name": "Dino Grand Court 2.0",
+        "title": "Giày lấy cảm hứng từ sân đấu với họa tiết khủng long, được làm một phần từ vật liệu tái chế.",
+        "category": "giaytreem",
+        "imageUrl": [
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a317945136b476dbd94fc462b286122_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_01_00_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/62054582da7a49b78b750f9f37b16956_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_02_standard_hover_hover.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/73149fc0d17442dcb2b306b214313e53_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_03_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a6f88f14452741df9e7515246bfcd0d1_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_04_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f4a3d783d32649aaa8344d784f9a33f3_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_05_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/86eaece4401c4aa5a3157f08e0630c6d_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_06_standard.jpg",
+            "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/94728ed28bd34129bec140215ae5b1e0_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_09_standard.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/b3197bdd56404ed3aff75c18b19e9130_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_41_detail.jpg",
+            "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/68b5b82ab8d849f487d452935dd91ec0_9366/Dino_Grand_Court_2.0_Shoes_Kids_White_JI3896_42_detail.jpg"
+        ],
+        "oldPrice": "4900000",
+        "sizes": [
+            {
+                "size": "10",
+                "isSelected": false,
+                "_id": "67dff16cf5f2c796e8160740"
+            },
+            {
+                "size": "11",
+                "isSelected": false,
+                "_id": "67dff16cf5f2c796e8160741"
+            },
+            {
+                "size": "12",
+                "isSelected": false,
+                "_id": "67dff16cf5f2c796e8160742"
+            },
+            {
+                "size": "13",
+                "isSelected": false,
+                "_id": "67dff16cf5f2c796e8160743"
+            },
+            {
+                "size": "14",
+                "isSelected": false,
+                "_id": "67dff16cf5f2c796e8160744"
+            },
+            {
+                "size": "15",
+                "isSelected": false,
+                "_id": "67dff16cf5f2c796e8160745"
+            },
+            {
+                "size": "16",
+                "isSelected": false,
+                "_id": "67dff16cf5f2c796e8160746"
+            }
+        ],
+        "price": "4900000",
+        "description": "Gọi tất cả những người yêu thích khủng long. Những đôi giày dành cho trẻ em này hoàn hảo cho niềm vui hàng ngày. Phần trên tổng hợp mang lại sự thoải mái cả ngày trong khi đế cao su có độ bám đáng tin cậy. Dây đai móc và vòng trên dây giày đàn hồi mang lại sự vừa vặn, an toàn. Họa tiết khủng long tạo thêm nét vui tươi."
+    }
+]
