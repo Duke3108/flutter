@@ -6,8 +6,6 @@ import 'package:duke_shoes_shop/views/shared/resusableText.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../controllers/login_provider.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 

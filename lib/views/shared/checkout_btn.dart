@@ -1,6 +1,5 @@
+import 'package:duke_shoes_shop/views/shared/appstyle.dart';
 import 'package:flutter/material.dart';
-
-import 'appstyle.dart';
 
 class CheckoutButton extends StatelessWidget {
   const CheckoutButton({
@@ -16,9 +15,9 @@ class CheckoutButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.all(Radius.circular(12))),
           height: 50,

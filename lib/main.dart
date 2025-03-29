@@ -2,6 +2,7 @@ import 'package:duke_shoes_shop/controllers/cart_provider.dart';
 import 'package:duke_shoes_shop/controllers/favorite_provider.dart';
 import 'package:duke_shoes_shop/controllers/login_provider.dart';
 import 'package:duke_shoes_shop/controllers/mainscreen_provider.dart';
+import 'package:duke_shoes_shop/controllers/payment_provider.dart';
 import 'package:duke_shoes_shop/controllers/product_provider.dart';
 import 'package:duke_shoes_shop/views/ui/mainscreen.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ void main() async {
     ChangeNotifierProvider(create: (context) => ProductNotifier()),
     ChangeNotifierProvider(create: (context) => FavoritesNotifier()),
     ChangeNotifierProvider(create: (context) => CartProvider()),
-    ChangeNotifierProvider(create: (context) => LoginNotifier())
+    ChangeNotifierProvider(create: (context) => LoginNotifier()),
+    ChangeNotifierProvider(create: (context) => PaymentNotifier()),
   ], child: const MainApp()));
 }
 

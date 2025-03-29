@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:duke_shoes_shop/models/cart/add_to_cart.dart';
 import 'package:duke_shoes_shop/models/cart/get_products.dart';
+import 'package:duke_shoes_shop/models/order/orders_res.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -68,6 +69,26 @@ class CartHelper {
       return true;
     } else {
       return false;
+    }
+  }
+
+  Future<List<PaidOrders>> getOrders() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? userToken = prefs.getString('token');
+    Map<String, String> requestHeaders = {
+      'Content-Type': 'application/json',
+      'token': 'Bearer $userToken'
+    };
+
+    var url = Uri.http(Config.apiUrl, Config.orders);
+
+    var response = await client.get(url, headers: requestHeaders);
+
+    if (response.statusCode == 200) {
+      var products = paidOrdersFromJson(response.body);
+      return products;
+    } else {
+      throw Exception("Failed to get orders");
     }
   }
 }

@@ -7,6 +7,7 @@ import 'package:duke_shoes_shop/views/ui/auth/login.dart';
 import 'package:duke_shoes_shop/views/ui/cartpage.dart';
 import 'package:duke_shoes_shop/views/ui/favoritepage.dart';
 import 'package:duke_shoes_shop/views/ui/nonuser.dart';
+import 'package:duke_shoes_shop/views/ui/orders/orders.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -173,7 +174,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => LoginPage()));
+                                          builder: (context) =>
+                                              ProcessOrders()));
                                 },
                                 title: "Đơn hàng",
                                 leading:

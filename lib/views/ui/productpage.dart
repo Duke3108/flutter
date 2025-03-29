@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:duke_shoes_shop/controllers/cart_provider.dart';
 import 'package:duke_shoes_shop/controllers/favorite_provider.dart';
 import 'package:duke_shoes_shop/controllers/product_provider.dart';
 import 'package:duke_shoes_shop/models/cart/add_to_cart.dart';
@@ -31,7 +30,6 @@ class _ProductPageState extends State<ProductPage> {
 
   @override
   Widget build(BuildContext context) {
-    var cartNotifier = Provider.of<CartProvider>(context);
     var authNotifier = Provider.of<LoginNotifier>(context);
     var favoritesNotifier =
         Provider.of<FavoritesNotifier>(context, listen: false);
