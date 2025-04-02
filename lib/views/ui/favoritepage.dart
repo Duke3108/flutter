@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:duke_shoes_shop/views/shared/appstyle.dart';
+import 'package:duke_shoes_shop/views/shared/resusableText.dart';
 import 'package:duke_shoes_shop/views/ui/mainscreen.dart';
 import 'package:duke_shoes_shop/views/ui/nonuser.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,11 @@ class Favorites extends StatefulWidget {
 
 String catChuoi(String text, int length) {
   return text.length > length ? '${text.substring(0, length)}...' : text;
+}
+
+String formatPrice(String price) {
+  int value = int.tryParse(price.replaceAll(',', '')) ?? 0;
+  return NumberFormat('#,###').format(value * 100);
 }
 
 class _FavoritesState extends State<Favorites> {
@@ -95,24 +101,23 @@ class _FavoritesState extends State<Favorites> {
                                           ),
                                         ),
                                         Padding(
-                                          padding: EdgeInsets.only(
-                                              top: 12, left: 20),
+                                          padding:
+                                              EdgeInsets.only(top: 12, left: 5),
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Text(
-                                                catChuoi(shoe['name'], 20),
-                                                maxLines: 1,
-                                                overflow: TextOverflow.ellipsis,
+                                              reusableText(
+                                                text:
+                                                    catChuoi(shoe['name'], 23),
                                                 style: appStyle(
                                                     16,
                                                     Colors.black,
                                                     FontWeight.bold),
                                               ),
                                               SizedBox(height: 5),
-                                              Text(
-                                                shoe['category'],
+                                              reusableText(
+                                                text: shoe['category'],
                                                 style: appStyle(14, Colors.grey,
                                                     FontWeight.w600),
                                               ),
@@ -122,12 +127,9 @@ class _FavoritesState extends State<Favorites> {
                                                     MainAxisAlignment
                                                         .spaceBetween,
                                                 children: [
-                                                  Text(
-                                                    NumberFormat('#,###')
-                                                        .format(int.parse(
-                                                            shoe['price']
-                                                                .replaceAll(
-                                                                    ',', ''))),
+                                                  reusableText(
+                                                    text: formatPrice(
+                                                        shoe['price']),
                                                     style: appStyle(
                                                         18,
                                                         Colors.black,

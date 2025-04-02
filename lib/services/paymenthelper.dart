@@ -14,7 +14,6 @@ class PaymentHelper {
     var url = Uri.https(Config.paymentBaseUrl, Config.paymentUrl);
     var response = await client.post(url,
         headers: requestHeaders, body: jsonEncode(model.toJson()));
-    print(response.statusCode);
     if (response.statusCode == 200) {
       var payment = jsonDecode(response.body);
       return payment['url'];

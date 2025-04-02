@@ -3,13 +3,13 @@ import 'dart:convert';
 import 'package:duke_shoes_shop/models/cart/add_to_cart.dart';
 import 'package:duke_shoes_shop/models/cart/get_products.dart';
 import 'package:duke_shoes_shop/models/order/orders_res.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'config.dart';
 
 class CartHelper {
-  static var client = http.Client();
+  static var client = https.Client();
 
   Future<bool> addToCart(AddToCart model) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -19,7 +19,7 @@ class CartHelper {
       'token': 'Bearer $userToken'
     };
 
-    var url = Uri.http(Config.apiUrl, Config.addCartUrl);
+    var url = Uri.https(Config.apiUrl, Config.addCartUrl);
 
     var response = await client.post(url,
         headers: requestHeaders, body: jsonEncode(model.toJson()));
@@ -38,7 +38,7 @@ class CartHelper {
       'token': 'Bearer $userToken'
     };
 
-    var url = Uri.http(Config.apiUrl, Config.getCartUrl);
+    var url = Uri.https(Config.apiUrl, Config.getCartUrl);
 
     var response = await client.get(url, headers: requestHeaders);
 
@@ -62,7 +62,7 @@ class CartHelper {
       'token': 'Bearer $userToken'
     };
 
-    var url = Uri.http(Config.apiUrl, "${Config.addCartUrl}/$id");
+    var url = Uri.https(Config.apiUrl, "${Config.addCartUrl}/$id");
 
     var response = await client.delete(url, headers: requestHeaders);
     if (response.statusCode == 200) {
@@ -80,7 +80,7 @@ class CartHelper {
       'token': 'Bearer $userToken'
     };
 
-    var url = Uri.http(Config.apiUrl, Config.orders);
+    var url = Uri.https(Config.apiUrl, Config.orders);
 
     var response = await client.get(url, headers: requestHeaders);
 

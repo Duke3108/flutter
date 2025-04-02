@@ -15,6 +15,11 @@ class ProcessOrders extends StatefulWidget {
   State<ProcessOrders> createState() => _ProcessOrdersState();
 }
 
+String formatPrice(String price) {
+  int value = int.tryParse(price.replaceAll(',', '')) ?? 0;
+  return NumberFormat('#,###').format(value * 100);
+}
+
 class _ProcessOrdersState extends State<ProcessOrders> {
   Future<List<PaidOrders>>? _orders;
 
@@ -31,9 +36,14 @@ class _ProcessOrdersState extends State<ProcessOrders> {
         toolbarHeight: 40.h,
         backgroundColor: Colors.black,
         elevation: 0,
-        leading: Icon(
-          AntDesign.left,
-          color: Colors.white,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            AntDesign.left,
+            color: Colors.white,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -138,10 +148,8 @@ class _ProcessOrdersState extends State<ProcessOrders> {
                                           ),
                                           SizedBox(height: 5.h),
                                           reusableText(
-                                              text: NumberFormat('#,###')
-                                                  .format(int.parse(order
-                                                      .productId.price
-                                                      .replaceAll(',', ''))),
+                                              text: formatPrice(
+                                                  order.productId.price),
                                               style: appStyle(
                                                   12,
                                                   Colors.grey.shade600,

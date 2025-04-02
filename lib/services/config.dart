@@ -1,5 +1,5 @@
 class Config {
-  static const apiUrl = "10.0.2.2:3108";
+  static const apiUrl = "be-snowy-chi.vercel.app";
   static const paymentBaseUrl = "payment-production-e245.up.railway.app";
   static const String loginUrl = "/api/login";
   static const String paymentUrl = "/stripe/create-checkout-session";

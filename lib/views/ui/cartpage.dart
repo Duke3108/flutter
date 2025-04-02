@@ -30,6 +30,11 @@ class _CartPageState extends State<CartPage> {
 
   late Future<List<Product>> _cartList;
 
+  String formatPrice(String price) {
+    int value = int.tryParse(price.replaceAll(',', '')) ?? 0;
+    return NumberFormat('#,###').format(value * 100);
+  }
+
   @override
   void initState() {
     _cartList = CartHelper().getCart();
@@ -53,20 +58,25 @@ class _CartPageState extends State<CartPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 40),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(
-                          AntDesign.close,
-                          color: Colors.black,
-                        ),
+                      Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Icon(
+                              AntDesign.left,
+                              color: Colors.black,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          reusableText(
+                            text: "Giỏ Hàng",
+                            style: appStyle(32, Colors.black, FontWeight.bold),
+                          ),
+                        ],
                       ),
-                      Text(
-                        "Giỏ Hàng",
-                        style: appStyle(36, Colors.black, FontWeight.bold),
-                      ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 10),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.65,
                         child: FutureBuilder(
@@ -254,11 +264,9 @@ class _CartPageState extends State<CartPage> {
                                                             Row(
                                                               children: [
                                                                 Text(
-                                                                  NumberFormat(
-                                                                          '###,###.###')
-                                                                      .format(int.parse(data
-                                                                          .cartItem
-                                                                          .price)),
+                                                                  formatPrice(data
+                                                                      .cartItem
+                                                                      .price),
                                                                   style: appStyle(
                                                                       18,
                                                                       Colors

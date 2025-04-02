@@ -14,6 +14,11 @@ class GridProduct extends StatelessWidget {
 
   final Future<List<Sneakers>> _male;
 
+  String formatPrice(String price) {
+    int value = int.tryParse(price.replaceAll(',', '')) ?? 0;
+    return NumberFormat('#,###').format(value * 100);
+  }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Sneakers>>(
@@ -35,7 +40,7 @@ class GridProduct extends StatelessWidget {
                 staggeredTileBuilder: (index) => StaggeredTile.extent(
                     (index % 2 == 0) ? 1 : 1,
                     (index % 4 == 1 || index % 4 == 3)
-                        ? MediaQuery.of(context).size.height * 0.35
+                        ? MediaQuery.of(context).size.height * 0.3
                         : MediaQuery.of(context).size.height * 0.3),
                 itemBuilder: (context, index) {
                   final shoe = snapshot.data![index];
@@ -50,8 +55,7 @@ class GridProduct extends StatelessWidget {
                     child: StaggerTile(
                         imageUrl: shoe.imageUrl[0],
                         name: shoe.name,
-                        price: NumberFormat('###,###.###')
-                            .format(int.parse(shoe.price))),
+                        price: formatPrice(shoe.price)),
                   );
                 });
           }

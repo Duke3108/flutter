@@ -1,12 +1,12 @@
 import 'package:duke_shoes_shop/services/config.dart';
 import '../models/sneaker_model.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 
 class Helper {
-  var client = http.Client();
+  var client = https.Client();
 
   Future<List<Sneakers>> getMaleSneakers() async {
-    var url = Uri.http(Config.apiUrl, Config.sneakers);
+    var url = Uri.https(Config.apiUrl, Config.sneakers);
     var response = await client.get(url);
     if (response.statusCode == 200) {
       final maleList = sneakersFromJson(response.body);
@@ -18,7 +18,7 @@ class Helper {
   }
 
   Future<List<Sneakers>> getFemaleSneakers() async {
-    var url = Uri.http(Config.apiUrl, Config.sneakers);
+    var url = Uri.https(Config.apiUrl, Config.sneakers);
 
     var response = await client.get(url);
 
@@ -32,7 +32,7 @@ class Helper {
   }
 
   Future<List<Sneakers>> getKidSneakers() async {
-    var url = Uri.http(Config.apiUrl, Config.sneakers);
+    var url = Uri.https(Config.apiUrl, Config.sneakers);
 
     var response = await client.get(url);
 
@@ -46,7 +46,7 @@ class Helper {
   }
 
   Future<List<Sneakers>> search(String searchquery) async {
-    var url = Uri.http(Config.apiUrl, "${Config.search}$searchquery");
+    var url = Uri.https(Config.apiUrl, "${Config.search}$searchquery");
     var response = await client.get(url);
 
     if (response.statusCode == 200) {

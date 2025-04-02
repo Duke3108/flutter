@@ -19,6 +19,11 @@ class SearchPage extends StatefulWidget {
   State<SearchPage> createState() => _SearchPageState();
 }
 
+String formatPrice(String price) {
+  int value = int.tryParse(price.replaceAll(',', '')) ?? 0;
+  return NumberFormat('#,###').format(value * 100);
+}
+
 class _SearchPageState extends State<SearchPage> {
   TextEditingController search = TextEditingController();
 
@@ -143,23 +148,20 @@ class _SearchPageState extends State<SearchPage> {
                                                         16,
                                                         Colors.black,
                                                         FontWeight.w600)),
-                                                SizedBox(height: 5),
+                                                SizedBox(height: 5.h),
                                                 reusableText(
                                                     text: shoe.category,
                                                     style: appStyle(
                                                         13,
                                                         Colors.grey.shade600,
                                                         FontWeight.w600)),
-                                                SizedBox(height: 5),
+                                                SizedBox(height: 5.h),
                                                 reusableText(
-                                                    text: NumberFormat('#,###')
-                                                        .format(int.parse(shoe
-                                                            .price
-                                                            .replaceAll(
-                                                                ',', ''))),
+                                                    text:
+                                                        formatPrice(shoe.price),
                                                     style: appStyle(
                                                         13,
-                                                        Colors.grey.shade600,
+                                                        Colors.black,
                                                         FontWeight.w600))
                                               ],
                                             ),

@@ -1,19 +1,19 @@
 import 'package:duke_shoes_shop/models/auth/signup_model.dart';
 import 'package:duke_shoes_shop/models/auth_response/login_res_model.dart';
 import 'package:duke_shoes_shop/models/auth_response/profile_model.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'config.dart';
 import 'dart:convert';
 import '../models/auth/login_model.dart';
 
 class AuthHelper {
-  static var client = http.Client();
+  static var client = https.Client();
 
   Future<bool> login(LoginModel model) async {
     Map<String, String> requestHeaders = {'Content-Type': 'application/json'};
 
-    var url = Uri.http(Config.apiUrl, Config.loginUrl);
+    var url = Uri.https(Config.apiUrl, Config.loginUrl);
 
     var response = await client.post(url,
         headers: requestHeaders, body: jsonEncode(model.toJson()));
@@ -36,7 +36,7 @@ class AuthHelper {
   Future<bool> signup(SignupModel model) async {
     Map<String, String> requestHeaders = {'Content-Type': 'application/json'};
 
-    var url = Uri.http(Config.apiUrl, Config.signupUrl);
+    var url = Uri.https(Config.apiUrl, Config.signupUrl);
 
     var response = await client.post(url,
         headers: requestHeaders, body: jsonEncode(model.toJson()));
@@ -55,7 +55,7 @@ class AuthHelper {
       'token': 'Bearer $userToken'
     };
 
-    var url = Uri.http(Config.apiUrl, Config.getUserUrl);
+    var url = Uri.https(Config.apiUrl, Config.getUserUrl);
 
     var response = await client.get(url, headers: requestHeaders);
 

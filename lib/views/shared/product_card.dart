@@ -5,6 +5,7 @@ import 'package:duke_shoes_shop/views/ui/auth/login.dart';
 import 'package:duke_shoes_shop/views/ui/favoritepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '../../controllers/favorite_provider.dart';
 
@@ -25,6 +26,11 @@ class ProductCard extends StatefulWidget {
 
   @override
   State<ProductCard> createState() => _ProductCardState();
+}
+
+String formatPrice(String price) {
+  int value = int.tryParse(price.replaceAll(',', '')) ?? 0;
+  return NumberFormat('#,###').format(value * 100);
 }
 
 class _ProductCardState extends State<ProductCard> {
@@ -127,7 +133,7 @@ class _ProductCardState extends State<ProductCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     reusableText(
-                      text: widget.price,
+                      text: formatPrice(widget.price),
                       style: appStyle(30, Colors.black, FontWeight.w600),
                     ),
                     Row(

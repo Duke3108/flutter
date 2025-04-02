@@ -34,14 +34,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           child: Stack(
             children: [
               Container(
-                padding: EdgeInsets.fromLTRB(16, 45, 0, 0),
+                padding: EdgeInsets.fromLTRB(16, 40, 0, 0),
                 height: MediaQuery.of(context).size.height * 0.4,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/top_image.png"),
                         fit: BoxFit.cover)),
                 child: Container(
-                  padding: EdgeInsets.only(left: 8, bottom: 15),
+                  padding: EdgeInsets.only(left: 8, bottom: 10),
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,6 +64,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           1.2,
                         ),
                       ),
+                      SizedBox(height: 10),
                       TabBar(
                           padding: EdgeInsets.zero,
                           tabAlignment: TabAlignment.start,
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           isScrollable: true,
                           labelColor: Colors.white,
                           labelStyle:
-                              appStyle(24, Colors.white, FontWeight.bold),
+                              appStyle(32, Colors.white, FontWeight.bold),
                           unselectedLabelColor: Colors.grey.withOpacity(0.3),
                           tabs: const [
                             Tab(text: "Giày Nam"),
